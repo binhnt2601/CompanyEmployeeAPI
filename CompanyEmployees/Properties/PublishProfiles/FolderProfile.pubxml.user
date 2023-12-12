@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Published\CompanyEmployees</_PublishTargetUrl>
+    <History>True|2023-12-11T08:36:32.6559243Z;False|2023-12-11T15:36:08.1157782+07:00;False|2023-12-11T15:35:49.7508479+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=NTBSPC%3b Database=CompanyEmployee%3b Integrated Security=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
