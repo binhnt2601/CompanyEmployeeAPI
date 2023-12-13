@@ -10,7 +10,7 @@ namespace Contracts
     public interface IAuthenticationManager
     {
         Task<bool> ValidateUser(UserForAuthenticationDTO userForAuth);
-        Task<string> CreateToken();
-
+        Task<TokenDTO> CreateToken(bool populateExp);
+        Task<TokenDTO> RefreshToken(TokenDTO tokenDto);
     }
 }

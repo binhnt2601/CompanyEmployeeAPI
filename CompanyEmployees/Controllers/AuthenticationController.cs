@@ -73,7 +73,16 @@ namespace CompanyEmployees.Controllers
                 _logger.LogWarning($"{nameof(Authenticate)}: Authentication failed. Wrong user name or password.");
             return Unauthorized();
             }
-            return Ok(new { Token = await _authManager.CreateToken() });
+            var tokenDto = await _authManager.CreateToken(populateExp: true);
+            return Ok(tokenDto);
+        }
+
+        [HttpPost("refresh")]
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
+        public async Task<IActionResult> Refresh([FromBody] TokenDTO tokenDto)
+        {
+            var tokenDtoToReturn = await _authManager.RefreshToken(tokenDto);
+            return Ok(tokenDtoToReturn);
         }
 
     }
