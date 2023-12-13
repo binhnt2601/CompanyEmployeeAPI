@@ -6,5 +6,6 @@ Functionalities:
 + Sorting
 + Searching
 + Data Shaping
++ Caching
 + HATEOAS
 + Rate Limitting and Throttling
